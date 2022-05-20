@@ -1,7 +1,7 @@
 ## Dylan J. Altschuler
-NYU Courant - PhD Candidate 
-Expected Graduation: 2023
+NYU Courant - PhD Candidate
 
-I study probability. I am particularly interested in high-dimensional geometry, random combinatorics, and sharp phase transitions. I am fortunate to be advised by Jonathan Niles-Weed. 
+I am a Math PhD candidate studying probability theory; my research focuses on high-dimensional phenomena and random combinatorics. At NYU, I am fortunate to be advised by Jonathan Niles-Weed. Before NYU, I received a bachelor's degree in math from Princeton University. Expected graduation of 2023.
+
 
 **Site under construction**
