@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Dylan J. Altschuler</title> <!-- title that appears in tab -->
+  
+  <meta name="author" content="Dylan J. Altschuler">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <!-- tr = new row, td = col -->
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Dylan J. Altschuler</name>
+                <!-- name displayed on webpage -->
+              </p>
+              
+              <p style="text-align:center">
+                <a href="data/dja-CV.pdf">CV</a> &nbsp/&nbsp
+                <a href="data/dja-bio.txt">Bio</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?hl=en&user=4JYEysUAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
+              </p>
+              
+              site under construction; links may not work yet. 
+
+              <heading>About</heading>
+              <p>I am a Ph.D. student at the Courant Institute of Mathematics where I am fortunate to be advised by <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>. For summer 2022, I am grateful to <a href="https://people.math.ethz.ch/~abandeira/">Afonso Bandeira</a> for hosting me as a visiting researcher at ETH Zürich. Prior to NYU, I graduated from Princeton University with a degree in mathematics.
+              </p>
+
+              <p>I study probability, especially high-dimensional phenomena and random combinatorics. My research is partially supported by an NSF Graduate Research Fellowship (NSF GRFP) and a MacCracken Fellowship.
+              </p>
+
+              <p>You can reach me at first name [dot] last name [at] courant.nyu.edu. My office is WWH 1030; feel free to stop by in the Fall when I return. </p>
+
+              <p> CV will be added shortly <a href="data/cv/CV-5-21-22.pdf"> CV</a>. </p>
+
+
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/dja.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="ETH_headshot.png" class="hoverZoomLink"></a>
+            </td>
+
+          </tr>
+        </tbody></table>
+        
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research - current</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+        
+       
+		    <tr>
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <papertitle>Fluctuations of the symmetric perceptron</papertitle>
+              </a>
+              <br>
+              <strong>Dylan J. Altschuler</strong>,
+              <br>
+              <em>ArXiv Preprint 2022.</em> (<a href="https://arxiv.org/pdf/2205.02319.pdf">arXiv</a>)
+              <br> 
+              <p> We establish the size of the critical window for the "combinatorial discrepancy of a Gaussian matrix" (also called "the storage capacity of the symmetric binary perceptron"). We also contribute exponential tail bounds. </p>
+            </td>
+          </tr>
+        
+
+          <tr>
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <papertitle>Discrepancy of random rectangular matrices</papertitle>
+              </a>
+              <br>
+              <strong>Dylan J. Altschuler</strong>,
+              <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>,
+              <br>
+              <em>Random Struct. Algorithms, 2021.</em> (<a href="https://arxiv.org/pdf/2101.04036.pdf">arXiv</a>)
+              <br> 
+              <p> We give an exact trade-off of the discrepancy vs the dimension, for some canonical ensembles of integer matrices. </p>
+            </td>
+          </tr>
+
+
+</tbody></table>
+
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research - previous</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+        
+       
+		    <tr>
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <papertitle>test</papertitle>
+              </a>
+              <br>
+              <strong>Dylan J. Altschuler</strong>,
+              <br>
+              <em>ArXiv Preprint 2022.</em> (<a href="https://arxiv.org/pdf/2205.02319.pdf">arXiv</a>)
+              <br> 
+              <p> description </p>
+            </td>
+          </tr>
+        
+
+
+</tbody></table>
+
+
+
+
+
+</html>
