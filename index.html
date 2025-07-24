@@ -9,268 +9,417 @@
   <meta name="author" content="Dylan J. Altschuler">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="l759kYX0N1YdxPlNQuYUo9IeeTZ6HvAIAn1ZKCJKCL0" />
-  <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+  body {
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 850px;
+    padding: 40px;
+  }
+  
+  name {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  heading {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c5aa0;
+    margin: 30px -20px 15px -20px;
+    padding: 12px 20px;
+    background-color: #f8fafb;
+    border-left: 4px solid #2c5aa0;
+  }
+  
+  a {
+    color: #2c5aa0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #1e3d6f;
+    text-decoration: underline;
+  }
+  
+  .job-market-banner {
+    background-color: #f0f5fa;
+    color: #2c5aa0;
+    border: 1px solid #d0e0f0;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+    margin: 40px 0;
+  }
+  
+  .paper-item {
+    margin-bottom: 20px;
+    padding: 15px 15px 15px 40px;
+    position: relative;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .paper-item:hover {
+    background-color: #f8f9fa;
+    border-left-color: #2c5aa0;
+  }
+  
+  .paper-number {
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #2c5aa0;
+  }
+  
+  papertitle {
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+  
+  .summary-button {
+    margin-left: 10px;
+    padding: 3px 10px;
+    font-size: 12px;
+    background-color: #f0f4f8;
+    border: 1px solid #d0dae4;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #2c5aa0;
+    transition: all 0.2s ease;
+  }
+  
+  .summary-button:hover {
+    background-color: #2c5aa0;
+    color: white;
+    border-color: #2c5aa0;
+  }
+  
+  .paper-summary {
+    display: none;
+    margin-top: 12px;
+    padding: 12px 15px;
+    background-color: #f8fafb;
+    border-left: 3px solid #2c5aa0;
+    border-radius: 0 4px 4px 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .paper-summary.show {
+    display: block;
+  }
+  
+  .profile-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .nav-links a {
+    padding: 8px 16px;
+    border: 1px solid #2c5aa0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #2c5aa0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  strong {
+    color: #1a1a1a;
+  }
+  
+  em {
+    color: #666;
+  }
+</style>
+
+<script>
+  function toggleSummary(index) {
+    var summary = document.getElementById('summary-' + index);
+    var button = document.getElementById('button-' + index);
+    if (summary.classList.contains('show')) {
+      summary.classList.remove('show');
+      button.textContent = 'summary';
+    } else {
+      summary.classList.add('show');
+      button.textContent = 'hide';
+    }
+  }
 </script>
 	
 </head>
 
 <body> 
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <!-- tr = new row, td = col -->
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Dylan J. Altschuler</name>
-		       </p>
-                <!-- name displayed on webpage -->
-              </p>
-              
-              <p style="text-align:center">
-                <!-- <a href="Resume_10_17_2022.docx.pdf">CV</a> &nbsp/&nbsp*/ -->
-                <a href="https://scholar.google.com/citations?hl=en&user=4JYEysUAAAAJ&hl=en&oi=ao">Google Scholar</a>
-              </p>
-              <br>		
-		<br>
-		<br>
-              <heading>About</heading>
-              <p> I am currently a math postdoc at Carnegie Mellon, mentored by <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>. I completed my PhD in mathematics in May 2023 at New York University (Courant), advised by <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>. Prior to that, I graduated from Princeton University in 2018 with a B.A. in mathematics, with my senior thesis advised by <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
-              </p>
+  <div class="main-container">
+    <div class="profile-section">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr style="padding:0px">
+          <td style="padding:2.5%;width:63%;vertical-align:middle">
+            <p style="text-align:center;margin-bottom:10px;">
+              <name>Dylan J. Altschuler</name>
+            </p>
+            
+            <div class="nav-links">
+              <a href="https://scholar.google.com/citations?hl=en&user=4JYEysUAAAAJ&hl=en&oi=ao">Google Scholar</a>
+            </div>
+            
+            <div class="job-market-banner">
+              <strong style="color: #2c5aa0;">I am on the academic job market for 2025-2026</strong>
+            </div>
 
-              <p> You can reach me at daltschu [at] andrew.cmu.edu. My office is Wean Hall 8212.  </p>
-		
-
-	<heading>Research</heading>
-		<p>I study probability, especially high-dimensional phenomena, with applications to statistical physics, combinatorics, algorithm design, and (metric and asymptotic convex) geometry.
-              </p>
-		
-
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/dja.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="ETH_headshot.png" class="hoverZoomLink"></a>
-            </td>
-
-          </tr>
-        </tbody></table>
-        
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Metric dimension reduction modulus for logarithmic distortion</papertitle>
-              </a>
-              <br> 
-		    
-              <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
-              <br>
-		Preprint, 2025. (<a href="https://arxiv.org/pdf/2507.02785">arXiv</a>) 
-              <br> 
-		<p> A sharp characterization of the dimension reduction modulus for logarithmic distortion is given. The upper bound was was obtained in a series of advances, initiated by Bourgain. We finally give the matching lower bound, closing the long-standing gap. This also resolves a question of Naor's 2018 ICM plenary lecture. 
+          </td>
+          <td style="padding:2.5%;width:40%;max-width:40%">
+            <img style="width:100%;max-width:100%;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);" alt="profile photo" src="https://via.placeholder.com/300x400/cccccc/666666?text=Profile+Photo">
+          </td>
         </tr>
-		
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Discrete Poincare inequalities and universal approximators for random graphs</papertitle>
-              </a>
-              <br> 
-		    
-              <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
-              <br>
-		Preprint, 2025. (<a href="https://arxiv.org/abs/2506.17433">arXiv</a> // <a href="https://vimeo.com/showcase/metricembeddings?video=1099528291">video</a>)
-              <br> 
-		<p> The standard Euclidean Poincare inequality gives dimension-free bounds on the expansion of functions from an expander (e.g., random) graph into Euclidean space. We show an analogous inequality for functions from a random graph into another random graph. This gives a complete resolution to an open question of Jon Kleinberg (2013). As a corollary, we obtain a stochastic construction of a "universal approximator" for random graphs, answering a question of Mendel and Naor (2015). (A universal approximator is a remarkable data structure that allows for fast, approximate computation of certain functions). 
-        </tr>
-		
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>A universal threshold for geometric embeddings of trees</papertitle>
-              </a>
-              <br> 
-		    
-              <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
-              <br>
-		Submitted, 2025. (<a href="https://arxiv.org/abs/2504.15212">arXiv</a>)
-              <br> 
-		<p> When is it possible to embed a given tree into a given normed space? We show that there is a "universal" characterization: any bounded-degree tree on n vertices embeds into any space of dimension at least 64 log(n)/log(log(n)), and complete trees do not embed into any space of dimension less than .5 log(n)/log(log(n)). This phase transition is universal in the sense that it does not depend on the structure of the tree or host space. The proof proceeds by way of a randomized construction, which is analyzed using recent breakthroughs on KLS and slicing. 
-        </tr>
-		
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Universal geometric non-embedding of random regular graphs</papertitle>
-              </a>
-              <br> 
-		    
-              <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
-              <br>
-		Submitted, 2025. (<a href="https://arxiv.org/pdf/2501.09142">arXiv</a>)
-              <br> 
-		<p> It is a classical result that degree-regular expander graphs cannot be embedded as geometric graphs into Euclidean 	space of dimension that is sublogarithmic in the number of vertices. We show that this dimensional obstruction is universal with respect to the choice of norm. For asymptotically almost every degree-regular graph, there is no normed space of sublogarithmic dimenison which admits a geometric embedding. 
-        </tr>
-		
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>A combinatorial approach to nonlinear spectral gaps</papertitle>
-              </a>
-              <br> 
-		    
-              <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
-              <br>
-		Submitted, 2024. (<a href="https://arxiv.org/pdf/2410.04394">arXiv</a>)
-              <br> 
-	<p> Given a graph and a function mapping vertices to vectors, the standard discrete Poincare inequality bounds the Euclidean norm of the function in terms of the Euclidean norm of its discrete gradient. A natural generalization is to replace the usage of the Euclidean norm with an arbitrary norm, giving rise to the notion of ``nonlinear'' (i.e. non-Euclidean) spectral gaps. We introduce a combinatorial framework for proving quantitative estimates on nonlinear spectral gaps. As a corollary, we generalize a celebrated non-embeddability result of Matousek for expander graphs.
-          </tr>
-		
+      </tbody></table>
+    </div>
+    
+    <heading>About</heading>
+    <p style="line-height:1.6;color:#333;"> I am currently a math postdoc at Carnegie Mellon, mentored by <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>. I completed my PhD in mathematics in May 2023 at New York University (Courant), advised by <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>. Prior to that, I graduated from Princeton University in 2018 with a B.A. in mathematics, with my senior thesis advised by <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
+    </p>
 
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>On spectral outliers for inhomogenous random symmetric matrices</papertitle>
-              </a>
-              <br> 
-              <strong>DJA</strong>, Patrick O. Santos, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="https://wp.nyu.edu/pyoussef/">Pierre Youssef</a>.
-              <br>
-		Submitted, 2024. (<a href="https://arxiv.org/abs/2401.07852.pdf">arXiv</a>)
-              <br> 
-	<p> The spectra of Wigner matrices is quite well understood. Less is known when the assumption of a uniform variance profile is dropped. Our contribution is sharp conditions for the presence of eigenvalue outliers, depending only on the ``sparsity'', rather than the fine-grained structure, of the variance profile. This provides a "structural universality" principle. </p>
-          </tr>
-		
-       
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>A note on the capacity of the binary perceptron</papertitle>
-              </a>
-              <br>
-              <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
-              <br>
-              Permanent manuscript, 2024. (<a href="http://arxiv.org/abs/2401.15092">arXiv</a>).
-              <br> 
-              <p> A note on an elementary argument to show the capacity of the half-space binary perceptron is at most .847 (conjectured is .833, the best recorded previous bound is .996, and one is the trivial upper bound). Not intended for journal publication. </p>
-            </td>
-          </tr>
-		
-        <tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Zero-one laws for random feasibility problems</papertitle>
-              </a>
-              <br>
-              <strong>DJA</strong>. 
-              <br>
-               <em>Annals of Applied Probability</em>, 2025. (<a href="https://arxiv.org/abs/2309.13133.pdf">arXiv</a>).
-              <br> 
-              <p> We introduce and study a random model of combinatorial optimization with geometric structure. A variety of problems are encoded in this model, including random versions of: linear programming, integer programming, closest vector problem, shortest vector problem, combinatorial discrepancy, matrix balancing, and generalized perceptron models. Our main result is a robust "sharp threshold" or "zero-one" law for the feasibility of this problem. This yields a number of new sharp threshold results in the mentioned problems. </p>
-            </td>
-          </tr>
-		
-       
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Critical window of the symmetric perceptron</papertitle>
-              </a>
-              <br>
-              <strong>DJA</strong>.
-              <br>
-              <em>Electronic Journal of Probability</em>, 2023. (<a href="https://arxiv.org/pdf/2205.02319.pdf">arXiv</a> // <a href="https://mediaspace.gatech.edu/media/ARC+Colloquium/1_t58fwxnt">video</a>).
-              <br> 
-              <p> We establish the size of the fluctuations in the "combinatorial discrepancy of a Gaussian matrix" (equivalently, the critical window of the "storage capacity of the symmetric binary perceptron"). Perhaps quite 			surprisingly, the critical window corresponds to the addition of an (almost) constant number of rows! We also contribute exponential tail bounds. </p>
-            </td>
-          </tr>
-        
+    <p style="line-height:1.6;color:#333;"> You can reach me at daltschu [at] andrew.cmu.edu. My office is Wean Hall 8212.  </p>
+    
+    <div class="section-divider"></div>
 
-          <tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Discrepancy of random rectangular matrices</papertitle>
-              </a>
-              <br>
-              <strong>DJA</strong>,
-              <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>.
-              <br>
-              <em>Random Structures and Algorithms, 2021.</em> (<a href="https://arxiv.org/pdf/2101.04036.pdf">arXiv</a>)
-              <br> 
-              <p> We give an exact trade-off between discrepancy, dimension, and sparsity, for some canonical ensembles of integer matrices. This trade-off was previously only known in very limited parameter regimes: there is a fundamental obstruction to obtaining concentration results for integer matrices below a certain sparsity. By combining Stein's method of exchangeable pairs with the second moment method, we move past this obstruction and essentially characterize all regimes simultaneously. </p>
-            </td>
-          </tr>       
+    <heading>Research</heading>
+    <p style="line-height:1.6;color:#333;">I study probability, especially high-dimensional phenomena, with applications to statistical physics, combinatorics, algorithm design, and (metric and asymptotic convex) geometry.
+    </p>
+    
+    <div class="section-divider"></div>
+    
+    <heading>Publications</heading>
+    
+    <div style="margin-top:25px;">
+      
+      <div class="paper-item">
+        <span class="paper-number">14.</span>
+        <papertitle>Metric dimension reduction modulus for logarithmic distortion</papertitle>
+        <button class="summary-button" id="button-14" onclick="toggleSummary(14)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        <br>
+        <em>Preprint, 2025.</em> (<a href="https://arxiv.org/pdf/2507.02785">arXiv</a>)
+        <div class="paper-summary" id="summary-14">
+          A sharp characterization of the dimension reduction modulus for logarithmic distortion is given. The upper bound was was obtained in a series of advances, initiated by Bourgain. We finally give the matching lower bound, closing the long-standing gap. This also resolves a question of Naor's 2018 ICM plenary lecture.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">13.</span>
+        <papertitle>Discrete Poincare inequalities and universal approximators for random graphs</papertitle>
+        <button class="summary-button" id="button-13" onclick="toggleSummary(13)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        <br>
+        <em>Preprint, 2025.</em> (<a href="https://arxiv.org/abs/2506.17433">arXiv</a> // <a href="https://vimeo.com/showcase/metricembeddings?video=1099528291">video</a>)
+        <div class="paper-summary" id="summary-13">
+          The standard Euclidean Poincare inequality gives dimension-free bounds on the expansion of functions from an expander (e.g., random) graph into Euclidean space. We show an analogous inequality for functions from a random graph into another random graph. This gives a complete resolution to an open question of Jon Kleinberg (2013). As a corollary, we obtain a stochastic construction of a "universal approximator" for random graphs, answering a question of Mendel and Naor (2015). (A universal approximator is a remarkable data structure that allows for fast, approximate computation of certain functions).
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">12.</span>
+        <papertitle>A universal threshold for geometric embeddings of trees</papertitle>
+        <button class="summary-button" id="button-12" onclick="toggleSummary(12)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        <br>
+        <em>Submitted, 2025.</em> (<a href="https://arxiv.org/abs/2504.15212">arXiv</a>)
+        <div class="paper-summary" id="summary-12">
+          When is it possible to embed a given tree into a given normed space? We show that there is a "universal" characterization: any bounded-degree tree on n vertices embeds into any space of dimension at least 64 log(n)/log(log(n)), and complete trees do not embed into any space of dimension less than .5 log(n)/log(log(n)). This phase transition is universal in the sense that it does not depend on the structure of the tree or host space. The proof proceeds by way of a randomized construction, which is analyzed using recent breakthroughs on KLS and slicing.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">11.</span>
+        <papertitle>Universal geometric non-embedding of random regular graphs</papertitle>
+        <button class="summary-button" id="button-11" onclick="toggleSummary(11)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        <br>
+        <em>Submitted, 2025.</em> (<a href="https://arxiv.org/pdf/2501.09142">arXiv</a>)
+        <div class="paper-summary" id="summary-11">
+          It is a classical result that degree-regular expander graphs cannot be embedded as geometric graphs into Euclidean space of dimension that is sublogarithmic in the number of vertices. We show that this dimensional obstruction is universal with respect to the choice of norm. For asymptotically almost every degree-regular graph, there is no normed space of sublogarithmic dimenison which admits a geometric embedding.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">10.</span>
+        <papertitle>A combinatorial approach to nonlinear spectral gaps</papertitle>
+        <button class="summary-button" id="button-10" onclick="toggleSummary(10)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        <br>
+        <em>Submitted, 2024.</em> (<a href="https://arxiv.org/pdf/2410.04394">arXiv</a>)
+        <div class="paper-summary" id="summary-10">
+          Given a graph and a function mapping vertices to vectors, the standard discrete Poincare inequality bounds the Euclidean norm of the function in terms of the Euclidean norm of its discrete gradient. A natural generalization is to replace the usage of the Euclidean norm with an arbitrary norm, giving rise to the notion of ``nonlinear'' (i.e. non-Euclidean) spectral gaps. We introduce a combinatorial framework for proving quantitative estimates on nonlinear spectral gaps. As a corollary, we generalize a celebrated non-embeddability result of Matousek for expander graphs.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">9.</span>
+        <papertitle>On spectral outliers for inhomogenous random symmetric matrices</papertitle>
+        <button class="summary-button" id="button-9" onclick="toggleSummary(9)">summary</button>
+        <br>
+        <strong>DJA</strong>, Patrick O. Santos, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="https://wp.nyu.edu/pyoussef/">Pierre Youssef</a>.
+        <br>
+        <em>Submitted, 2024.</em> (<a href="https://arxiv.org/abs/2401.07852.pdf">arXiv</a>)
+        <div class="paper-summary" id="summary-9">
+          The spectra of Wigner matrices is quite well understood. Less is known when the assumption of a uniform variance profile is dropped. Our contribution is sharp conditions for the presence of eigenvalue outliers, depending only on the ``sparsity'', rather than the fine-grained structure, of the variance profile. This provides a "structural universality" principle.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">8.</span>
+        <papertitle>A note on the capacity of the binary perceptron</papertitle>
+        <button class="summary-button" id="button-8" onclick="toggleSummary(8)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        <br>
+        <em>Permanent manuscript, 2024.</em> (<a href="http://arxiv.org/abs/2401.15092">arXiv</a>).
+        <div class="paper-summary" id="summary-8">
+          A note on an elementary argument to show the capacity of the half-space binary perceptron is at most .847 (conjectured is .833, the best recorded previous bound is .996, and one is the trivial upper bound). Not intended for journal publication.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">7.</span>
+        <papertitle>Zero-one laws for random feasibility problems</papertitle>
+        <button class="summary-button" id="button-7" onclick="toggleSummary(7)">summary</button>
+        <br>
+        <strong>DJA</strong>.
+        <br>
+        <em>Annals of Applied Probability, 2025.</em> (<a href="https://arxiv.org/abs/2309.13133.pdf">arXiv</a>).
+        <div class="paper-summary" id="summary-7">
+          We introduce and study a random model of combinatorial optimization with geometric structure. A variety of problems are encoded in this model, including random versions of: linear programming, integer programming, closest vector problem, shortest vector problem, combinatorial discrepancy, matrix balancing, and generalized perceptron models. Our main result is a robust "sharp threshold" or "zero-one" law for the feasibility of this problem. This yields a number of new sharp threshold results in the mentioned problems.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">6.</span>
+        <papertitle>Critical window of the symmetric perceptron</papertitle>
+        <button class="summary-button" id="button-6" onclick="toggleSummary(6)">summary</button>
+        <br>
+        <strong>DJA</strong>.
+        <br>
+        <em>Electronic Journal of Probability, 2023.</em> (<a href="https://arxiv.org/pdf/2205.02319.pdf">arXiv</a> // <a href="https://mediaspace.gatech.edu/media/ARC+Colloquium/1_t58fwxnt">video</a>).
+        <div class="paper-summary" id="summary-6">
+          We establish the size of the fluctuations in the "combinatorial discrepancy of a Gaussian matrix" (equivalently, the critical window of the "storage capacity of the symmetric binary perceptron"). Perhaps quite surprisingly, the critical window corresponds to the addition of an (almost) constant number of rows! We also contribute exponential tail bounds.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">5.</span>
+        <papertitle>Discrepancy of random rectangular matrices</papertitle>
+        <button class="summary-button" id="button-5" onclick="toggleSummary(5)">summary</button>
+        <br>
+        <strong>DJA</strong>,
+        <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>.
+        <br>
+        <em>Random Structures and Algorithms, 2021.</em> (<a href="https://arxiv.org/pdf/2101.04036.pdf">arXiv</a>)
+        <div class="paper-summary" id="summary-5">
+          We give an exact trade-off between discrepancy, dimension, and sparsity, for some canonical ensembles of integer matrices. This trade-off was previously only known in very limited parameter regimes: there is a fundamental obstruction to obtaining concentration results for integer matrices below a certain sparsity. By combining Stein's method of exchangeable pairs with the second moment method, we move past this obstruction and essentially characterize all regimes simultaneously.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">4.</span>
+        <papertitle>Localized radial roll patterns in higher space dimensions</papertitle>
+        <button class="summary-button" id="button-4" onclick="toggleSummary(4)">summary</button>
+        <br>
+        Jason J. Bramburger, <strong>DJA</strong>, Chloe I. Avery, Tharathep Sangsawang, Margaret Beck, Paul Carter, Bjorn Sandstede.
+        <br>
+        <em>SIAM Journal of Applied Dynamical Systems, 2019.</em> (<a href="https://epubs.siam.org/doi/pdf/10.1137/18M1218728"> PDF</a>)
+        <div class="paper-summary" id="summary-4">
+          We investigate the "snaking" phenomenon in the bifurcation diagrams of some PDE's.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">3.</span>
+        <papertitle>Critical long range percolation: scaling limits for small β</papertitle>
+        <button class="summary-button" id="button-3" onclick="toggleSummary(3)">summary</button>
+        <br>
+        <strong>DJA</strong>, <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
+        <br>
+        <em>Princeton Senior Thesis, 2018.</em> (I hope to "eventually" write this up for publication. In the meanwhile, manuscript is available on request.)
+        <div class="paper-summary" id="summary-3">
+          We establish the a.s. convergence of 1-d critical long-range percolation to a random scaling limit, with respect to the "Gromov-Hausdorff" metric.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">2.</span>
+        <papertitle>The developmental rules of neural superposition in Drosophila</papertitle>
+        <button class="summary-button" id="button-2" onclick="toggleSummary(2)">summary</button>
+        <br>
+        Marion Langen, Egemen Agi, <strong>DJA</strong>, Lani F. Wu, Steven J. Altschuler, Peter R. Hiesinger.
+        <br>
+        <em>Cell, 2015.</em> (<a href="https://www.sciencedirect.com/science/article/pii/S0092867415006455"> PDF </a>)
+        <div class="paper-summary" id="summary-2">
+          We investigate pattern formation in the neural wiring process of the drosophila (fruit fly) compound eye during development.
+        </div>
+      </div>
+      
+      <div class="paper-item">
+        <span class="paper-number">1.</span>
+        <papertitle>The zoo of solitons for curve shortening in R^n</papertitle>
+        <button class="summary-button" id="button-1" onclick="toggleSummary(1)">summary</button>
+        <br>
+        <strong>DJA</strong>, Steven J. Altschuler, Lani F. Wu, Sigurd B. Angenent.
+        <br>
+        <em>Nonlinearity, 2015.</em> (<a href="https://arxiv.org/pdf/1207.4051.pdf"> ArXiv</a>)
+        <div class="paper-summary" id="summary-1">
+          We classify all solutions to the curve shortening equation that evolve by homotheti (any combination of translation, dilation, rotation).
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <heading>Disambiguation</heading>
+    <p style="line-height:1.6;color:#333;">There are several other mathematicians with the same last name; if you are looking for an optimization expert (who shares some co-authors), you may be looking for my brother <a href="https://jasonaltschuler.github.io/">Jason</a>.</p>
 
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Localized radial roll patterns in higher space dimensions</papertitle>
-              </a>
-              <br>
-              Jason J. Bramburger, <strong>DJA</strong>, Chloe I. Avery, Tharathep Sangsawang, Margaret Beck, Paul Carter, Bjorn Sandstede.
-              <br>
-              <em>SIAM Journal of Applied Dynamical Systems, 2019.</em> (<a href="https://epubs.siam.org/doi/pdf/10.1137/18M1218728"> PDF</a>)
-              <br> 
-              <p> We investigate the "snaking" phenomenon in the bifurcation diagrams of some PDE's. </p>
-            </td>
-          </tr>
-
-
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>Critical long range percolation: scaling limits for small β</papertitle>
-              </a>
-              <br>
-		<strong>DJA</strong>, <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
-              <br>
-		<em> Princeton Senior Thesis, 2018. </em> (I hope to "eventually" write this up for publication. In the meanwhile, manuscript is available on request.)
-              <br> 
-              <p> We establish the a.s. convergence of 1-d critical long-range percolation to a random scaling limit, with respect to the "Gromov-Hausdorff" metric. </p>
-            </td>
-          </tr>
-
-
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>The developmental rules of neural superposition in Drosophila</papertitle>
-              </a>
-              <br>
-		Marion Langen, Egemen Agi, <strong>DJA</strong>, Lani F. Wu, Steven J. Altschuler, Peter R. Hiesinger.
-              <br>
-               <em>Cell, 2015.</em> (<a href="https://www.sciencedirect.com/science/article/pii/S0092867415006455"> PDF </a>)
-              <br> 
-              <p> We investigate pattern formation in the neural wiring process of the drosophila (fruit fly) compound eye during development. </p>
-            </td>
-          </tr>
-
-
-
-	<tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <papertitle>The zoo of solitons for curve shortening in R^n</papertitle>
-              </a>
-              <br>
-		<strong>DJA</strong>, Steven J. Altschuler, Lani F. Wu, Sigurd B. Angenent.
-              <br>
-              <em>Nonlinearity, 2015.</em> (<a href="https://arxiv.org/pdf/1207.4051.pdf"> ArXiv</a>)
-              <br> 
-              <p> We classify all solutions to the curve shortening equation that evolve by homotheti (any combination of translation, dilation, rotation). </p>
-            </td>
-          </tr>
-
-
-
-
-</tbody></table>
-
-
-		<br>
-		<heading>Disambiguation</heading>
-
-		<p>There are several other mathematicians with the same last name; if you are looking for an optimization expert (who shares some co-authors), you may be looking for my brother <a href="https://jasonaltschuler.github.io/">Jason</a>.		
-		</p>
-
-
-
-
+  </div>
+</body>
 </html>
