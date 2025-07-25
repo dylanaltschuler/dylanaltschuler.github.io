@@ -22,17 +22,22 @@
     padding: 0;
   }
   
+  * {
+    box-sizing: border-box;
+  }
+  
   .main-container {
     background-color: white;
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     border-radius: 8px;
     margin: 40px auto;
     max-width: 850px;
-    padding: 40px;
+    padding: 30px;
+    overflow-x: hidden;
   }
   
   name {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     color: #1a1a1a;
   }
@@ -42,8 +47,8 @@
     font-size: 20px;
     font-weight: 600;
     color: #2c5aa0;
-    margin: 30px -20px 15px -20px;
-    padding: 12px 20px;
+    margin: 25px -15px 15px -15px;
+    padding: 12px 15px;
     background-color: #f8fafb;
     border-left: 4px solid #2c5aa0;
   }
@@ -60,12 +65,9 @@
   }
   
   .job-market-banner {
-    background-color: #f0f5fa;
     color: #2c5aa0;
-    border: 1px solid #d0e0f0;
-    border-radius: 6px;
-    padding: 12px 20px;
-    margin: 25px 0;
+    padding: 12px 0;
+    margin: 15px 0;
     text-align: center;
     font-size: 16px;
   }
@@ -73,12 +75,12 @@
   .section-divider {
     height: 1px;
     background: linear-gradient(to right, transparent, #e0e0e0, transparent);
-    margin: 40px 0;
+    margin: 30px 0;
   }
   
   .paper-item {
-    margin-bottom: 20px;
-    padding: 15px 15px 15px 40px;
+    margin-bottom: 15px;
+    padding: 12px 12px 12px 40px;
     position: relative;
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
@@ -99,6 +101,7 @@
   papertitle {
     font-weight: 500;
     color: #1a1a1a;
+    word-wrap: break-word;
   }
   
   .summary-button {
@@ -137,15 +140,15 @@
   .profile-section {
     background-color: #f8f9fa;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
   }
   
   .nav-links {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0;
+    margin: 15px 0;
   }
   
   .nav-links a {
@@ -167,6 +170,110 @@
   
   em {
     color: #666;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .main-container {
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 0;
+    }
+    
+    name {
+      font-size: 24px;
+    }
+    
+    heading {
+      font-size: 18px;
+      margin: 20px -10px 10px -10px;
+      padding: 10px;
+    }
+    
+    .profile-section table {
+      display: block;
+    }
+    
+    .profile-section tr {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .profile-section td {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 10px !important;
+    }
+    
+    .profile-section img {
+      max-width: 200px !important;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .paper-item {
+      padding: 10px 10px 10px 30px;
+      margin-bottom: 12px;
+    }
+    
+    .paper-number {
+      left: 8px;
+      font-size: 14px;
+    }
+    
+    papertitle {
+      font-size: 15px;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .summary-button {
+      display: inline-block;
+      margin-top: 5px;
+      margin-left: 0;
+    }
+    
+    .nav-links {
+      flex-wrap: wrap;
+    }
+    
+    .nav-links a {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+    
+    .job-market-banner {
+      font-size: 14px;
+      padding: 8px 0;
+      margin: 10px 0;
+    }
+    
+    .section-divider {
+      margin: 20px 0;
+    }
+    
+    body {
+      font-size: 14px;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-container {
+      margin: 0;
+      padding: 15px;
+    }
+    
+    name {
+      font-size: 22px;
+    }
+    
+    heading {
+      font-size: 16px;
+    }
   }
 </style>
 
@@ -191,21 +298,21 @@
     <div class="profile-section">
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr style="padding:0px">
-          <td style="padding:2.5%;width:63%;vertical-align:middle">
-            <p style="text-align:center;margin-bottom:10px;">
+          <td style="padding:2%;width:63%;vertical-align:middle">
+            <p style="text-align:center;margin-bottom:15px;">
               <name>Dylan J. Altschuler</name>
             </p>
+            
+            <div class="job-market-banner">
+              <span style="color: #6b8ab8;">I am on the academic job market for 2025-2026</span>
+            </div>
             
             <div class="nav-links">
               <a href="https://scholar.google.com/citations?hl=en&user=4JYEysUAAAAJ&hl=en&oi=ao">Google Scholar</a>
             </div>
-            
-            <div class="job-market-banner">
-              <strong style="color: #2c5aa0;">I am on the academic job market for 2025-2026</strong>
-            </div>
 
           </td>
-          <td style="padding:2.5%;width:40%;max-width:40%">
+          <td style="padding:2%;width:40%;max-width:40%">
             <img style="width:100%;max-width:100%;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);" alt="profile photo" src="ETH_headshot.png">
           </td>
         </tr>
@@ -235,7 +342,7 @@
         <papertitle>Metric dimension reduction modulus for logarithmic distortion</papertitle>
         <button class="summary-button" id="button-14" onclick="toggleSummary(14)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        With <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
         <br>
         <em>Preprint, 2025.</em> (<a href="https://arxiv.org/pdf/2507.02785">arXiv</a>)
         <div class="paper-summary" id="summary-14">
@@ -248,7 +355,7 @@
         <papertitle>Discrete Poincare inequalities and universal approximators for random graphs</papertitle>
         <button class="summary-button" id="button-13" onclick="toggleSummary(13)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        With <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
         <br>
         <em>Preprint, 2025.</em> (<a href="https://arxiv.org/abs/2506.17433">arXiv</a> // <a href="https://vimeo.com/showcase/metricembeddings?video=1099528291">video</a>)
         <div class="paper-summary" id="summary-13">
@@ -261,7 +368,7 @@
         <papertitle>A universal threshold for geometric embeddings of trees</papertitle>
         <button class="summary-button" id="button-12" onclick="toggleSummary(12)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        With <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
         <br>
         <em>Submitted, 2025.</em> (<a href="https://arxiv.org/abs/2504.15212">arXiv</a>)
         <div class="paper-summary" id="summary-12">
@@ -274,7 +381,7 @@
         <papertitle>Universal geometric non-embedding of random regular graphs</papertitle>
         <button class="summary-button" id="button-11" onclick="toggleSummary(11)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        With <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
         <br>
         <em>Submitted, 2025.</em> (<a href="https://arxiv.org/pdf/2501.09142">arXiv</a>)
         <div class="paper-summary" id="summary-11">
@@ -287,7 +394,7 @@
         <papertitle>A combinatorial approach to nonlinear spectral gaps</papertitle>
         <button class="summary-button" id="button-10" onclick="toggleSummary(10)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
+        With <a href="https://sites.google.com/view/pandelis-dodos/main">Pandelis Dodos</a>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="http://users.uoa.gr/~ktyros/">Konstantinos Tyros</a>.
         <br>
         <em>Submitted, 2024.</em> (<a href="https://arxiv.org/pdf/2410.04394">arXiv</a>)
         <div class="paper-summary" id="summary-10">
@@ -300,7 +407,7 @@
         <papertitle>On spectral outliers for inhomogenous random symmetric matrices</papertitle>
         <button class="summary-button" id="button-9" onclick="toggleSummary(9)">summary</button>
         <br>
-        <strong>DJA</strong>, Patrick O. Santos, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="https://wp.nyu.edu/pyoussef/">Pierre Youssef</a>.
+        With Patrick O. Santos, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>, <a href="https://wp.nyu.edu/pyoussef/">Pierre Youssef</a>.
         <br>
         <em>Submitted, 2024.</em> (<a href="https://arxiv.org/abs/2401.07852.pdf">arXiv</a>)
         <div class="paper-summary" id="summary-9">
@@ -313,7 +420,7 @@
         <papertitle>A note on the capacity of the binary perceptron</papertitle>
         <button class="summary-button" id="button-8" onclick="toggleSummary(8)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
+        With <a href="https://www.andrew.cmu.edu/user/ktikhomi/">Konstantin Tikhomirov</a>.
         <br>
         <em>Permanent manuscript, 2024.</em> (<a href="http://arxiv.org/abs/2401.15092">arXiv</a>).
         <div class="paper-summary" id="summary-8">
@@ -326,8 +433,6 @@
         <papertitle>Zero-one laws for random feasibility problems</papertitle>
         <button class="summary-button" id="button-7" onclick="toggleSummary(7)">summary</button>
         <br>
-        <strong>DJA</strong>.
-        <br>
         <em>Annals of Applied Probability, 2025.</em> (<a href="https://arxiv.org/abs/2309.13133.pdf">arXiv</a>).
         <div class="paper-summary" id="summary-7">
           We introduce and study a random model of combinatorial optimization with geometric structure. A variety of problems are encoded in this model, including random versions of: linear programming, integer programming, closest vector problem, shortest vector problem, combinatorial discrepancy, matrix balancing, and generalized perceptron models. Our main result is a robust "sharp threshold" or "zero-one" law for the feasibility of this problem. This yields a number of new sharp threshold results in the mentioned problems.
@@ -338,8 +443,6 @@
         <span class="paper-number">6.</span>
         <papertitle>Critical window of the symmetric perceptron</papertitle>
         <button class="summary-button" id="button-6" onclick="toggleSummary(6)">summary</button>
-        <br>
-        <strong>DJA</strong>.
         <br>
         <em>Electronic Journal of Probability, 2023.</em> (<a href="https://arxiv.org/pdf/2205.02319.pdf">arXiv</a> // <a href="https://mediaspace.gatech.edu/media/ARC+Colloquium/1_t58fwxnt">video</a>).
         <div class="paper-summary" id="summary-6">
@@ -352,8 +455,7 @@
         <papertitle>Discrepancy of random rectangular matrices</papertitle>
         <button class="summary-button" id="button-5" onclick="toggleSummary(5)">summary</button>
         <br>
-        <strong>DJA</strong>,
-        <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>.
+        With <a href="https://www.jonathannilesweed.com/">Jonathan Niles-Weed</a>.
         <br>
         <em>Random Structures and Algorithms, 2021.</em> (<a href="https://arxiv.org/pdf/2101.04036.pdf">arXiv</a>)
         <div class="paper-summary" id="summary-5">
@@ -366,7 +468,7 @@
         <papertitle>Localized radial roll patterns in higher space dimensions</papertitle>
         <button class="summary-button" id="button-4" onclick="toggleSummary(4)">summary</button>
         <br>
-        Jason J. Bramburger, <strong>DJA</strong>, Chloe I. Avery, Tharathep Sangsawang, Margaret Beck, Paul Carter, Bjorn Sandstede.
+        With Jason J. Bramburger, Chloe I. Avery, Tharathep Sangsawang, Margaret Beck, Paul Carter, Bjorn Sandstede.
         <br>
         <em>SIAM Journal of Applied Dynamical Systems, 2019.</em> (<a href="https://epubs.siam.org/doi/pdf/10.1137/18M1218728"> PDF</a>)
         <div class="paper-summary" id="summary-4">
@@ -379,11 +481,11 @@
         <papertitle>Critical long range percolation: scaling limits for small β</papertitle>
         <button class="summary-button" id="button-3" onclick="toggleSummary(3)">summary</button>
         <br>
-        <strong>DJA</strong>, <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
+        Advised by <a href="https://web.math.princeton.edu/~asly/">Allan Sly</a>.
         <br>
-        <em>Princeton Senior Thesis, 2018.</em> (I hope to "eventually" write this up for publication. In the meanwhile, manuscript is available on request.)
+        <em>Princeton Senior Thesis, 2018.</em> (manuscript available on request.)
         <div class="paper-summary" id="summary-3">
-          We establish the a.s. convergence of 1-d critical long-range percolation to a random scaling limit, with respect to the "Gromov-Hausdorff" metric.
+          We establish the a.s. convergence of 1-d critical long-range percolation to a random scaling limit, with respect to the "Gromov-Hausdorff" metric. (The regime considered is where the connection probability has the critical exponent, but is multiplied by a small leading constant, β.)
         </div>
       </div>
       
@@ -392,7 +494,7 @@
         <papertitle>The developmental rules of neural superposition in Drosophila</papertitle>
         <button class="summary-button" id="button-2" onclick="toggleSummary(2)">summary</button>
         <br>
-        Marion Langen, Egemen Agi, <strong>DJA</strong>, Lani F. Wu, Steven J. Altschuler, Peter R. Hiesinger.
+        With Marion Langen, Egemen Agi, Lani F. Wu, Steven J. Altschuler, Peter R. Hiesinger.
         <br>
         <em>Cell, 2015.</em> (<a href="https://www.sciencedirect.com/science/article/pii/S0092867415006455"> PDF </a>)
         <div class="paper-summary" id="summary-2">
@@ -405,7 +507,7 @@
         <papertitle>The zoo of solitons for curve shortening in R^n</papertitle>
         <button class="summary-button" id="button-1" onclick="toggleSummary(1)">summary</button>
         <br>
-        <strong>DJA</strong>, Steven J. Altschuler, Lani F. Wu, Sigurd B. Angenent.
+        With Steven J. Altschuler, Lani F. Wu, Sigurd B. Angenent.
         <br>
         <em>Nonlinearity, 2015.</em> (<a href="https://arxiv.org/pdf/1207.4051.pdf"> ArXiv</a>)
         <div class="paper-summary" id="summary-1">
