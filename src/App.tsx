@@ -56,7 +56,7 @@ const papers: Paper[] = [
     tags: ["Algorithms", "Discrepancy"],
     ai: 4,
     summary:
-      "We extend the range of sparsities for which the Beck–Fiala conjecture is known, down to almost logarithmic sparsity. More importantly, we do so by means of an online algorithm for minimizing prefix discrepancy; previous work on the conjecture uses offline arguments. Beck–Fiala scaling cannot hold below logarithmic sparsity in the online setting, and as a corollary the online Spencer setting is resolved. The proof constructs a compact Metropolis walk that combines ideas from recent work on online Komlós. AI assistance contributed significantly.",
+      "We extend the range of sparsities for which the Beck–Fiala conjecture is known, down to almost logarithmic sparsity. More importantly, we do so by means of an online algorithm for minimizing prefix discrepancy; previous work on the conjecture uses offline arguments. As Beck–Fiala scaling cannot hold below logarithmic sparsity in the online setting, our result is essentially optimal. The online Spencer setting is resolved as an immediate consequence.",
   },
   {
     number: 16,
