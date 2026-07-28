@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useMemo, useState } from "react";
 
 type Topic =
   | "Discrepancy"
@@ -296,6 +296,14 @@ const papers: Paper[] = [
   },
 ];
 
+const topics: Topic[] = [
+  "Algorithms",
+  "Discrepancy",
+  "Metric geometry",
+  "Misc",
+  "Statistical physics",
+];
+
 function topicClass(topic: Topic) {
   return `tag tag-${topic.toLowerCase().replaceAll(" ", "-")}`;
 }
@@ -329,6 +337,14 @@ function AuthorLine({ paper }: { paper: Paper }) {
 }
 
 export default function Home() {
+  const [topic, setTopic] = useState<Topic | null>(null);
+
+  const visiblePapers = useMemo(() => {
+    return papers.filter((paper) => !topic || paper.tags.includes(topic));
+  }, [topic]);
+
+  const hasFilters = topic !== null;
+
   return (
     <main className="site-shell">
       <header className="hero" id="top">
@@ -337,9 +353,9 @@ export default function Home() {
           <p className="institution">The University of Texas at Austin</p>
           <p className="role">Assistant Professor of Mathematics</p>
           <p className="lede">
-            I study discrete and high-dimensional probability, with
-            applications to combinatorics, statistical physics, algorithm
-            design, and {"{metric, convex}"} geometry.
+            Discrete and high-dimensional probability, with applications to
+            combinatorics, statistical physics, algorithm design, and{" "}
+            {"{metric, convex}"} geometry.
           </p>
           <nav className="profile-links" aria-label="Profile links">
             <a href="mailto:dylan.altschuler@austin.utexas.edu">Email</a>
@@ -383,57 +399,129 @@ export default function Home() {
             <p className="section-kicker">Research</p>
             <h2>Publications</h2>
           </div>
-          <div className="ai-scale">
-            <div className="ai-scale-label">
-              AI scale
-              <span className="ai-scale-info">
+          <p className="section-count" aria-live="polite">
+            Showing {visiblePapers.length} of {papers.length}
+          </p>
+        </div>
+
+        <div className="filter-panel">
+          <fieldset className="filter-group topic-filter">
+            <legend>Tags</legend>
+            <div className="filter-options">
+              <button
+                className={!topic ? "filter-chip active" : "filter-chip"}
+                type="button"
+                aria-pressed={!topic}
+                onClick={() => setTopic(null)}
+              >
+                All
+              </button>
+              {topics.map((label) => (
                 <button
-                  className="ai-scale-button"
+                  className={
+                    topic === label ? "filter-chip active" : "filter-chip"
+                  }
                   type="button"
-                  aria-label="Explain the AI usage scale"
-                  aria-describedby="ai-scale-description"
+                  aria-pressed={topic === label}
+                  onClick={() => setTopic(label)}
+                  key={label}
                 >
-                  ?
+                  {label}
                 </button>
-                <span
-                  className="ai-scale-tooltip"
-                  id="ai-scale-description"
+              ))}
+            </div>
+          </fieldset>
+
+          <div className="filter-controls">
+            <div className="filter-group ai-filter">
+              <div className="ai-scale-label">
+                AI Usage Scale
+                <span className="ai-scale-info">
+                  <button
+                    className="ai-scale-button"
+                    type="button"
+                    aria-label="Explain the AI usage scale"
+                    aria-describedby="ai-scale-description"
+                  >
+                    ?
+                  </button>
+                  <span
+                    className="ai-scale-tooltip"
+                    id="ai-scale-description"
                   role="tooltip"
                 >
-                  <span>
-                    <b>0</b> — No AI usage.
-                  </span>
-                  <span>
-                    <b>1</b> — AI used for manuscript preparation: editing,
-                    proofreading, or figures.
-                  </span>
-                  <span>
-                    <b>2</b> — AI used as a mathematics aide: suggested a minor
-                    innovation or automated a standard computation.
-                  </span>
-                  <span>
-                    <b>3</b> — Substantial AI usage: given a complete sketch
-                    with technical guidance, AI develops a first proof draft
-                    and suggests refinements.
-                  </span>
-                  <span>
-                    <b>4</b> — Substantial AI usage: given a high-level sketch
-                    containing nontrivial human insight, AI develops a full
-                    proof in a few rounds of prompting.
-                  </span>
-                  <span>
-                    <b>5</b> — Autonomous AI proof, with no significant human
-                    involvement or insight beyond problem selection and
-                    manuscript preparation.
+                    <span className="ai-scale-entry">
+                      <strong><b>0</b> — No AI</strong>
+                      <em>Pre-LLM era.</em>
+                    </span>
+                    <span className="ai-scale-entry">
+                      <strong><b>1</b> — Basic contribution</strong>
+                      <em>
+                        Ex: editing, proofreading, or figures. Ideation is
+                        entirely human.
+                      </em>
+                    </span>
+                    <span className="ai-scale-entry">
+                      <strong>
+                        <b>2</b> — Minor contribution; worthy of acknowledgement
+                        but not authorship
+                      </strong>
+                      <em>
+                        Ex: suggested a minor innovation, completed standard
+                        computations, autonomously drafted routine proofs.
+                        Ideation is predominantly human.
+                      </em>
+                    </span>
+                    <span className="ai-scale-entry">
+                      <strong>
+                        <b>3</b> — Junior or equal author-level contribution
+                      </strong>
+                      <em>
+                        Ex: given a complete sketch with technical guidance, AI
+                        develops a first proof draft and suggests refinements.
+                        (The sweetspot?)
+                      </em>
+                    </span>
+                    <span className="ai-scale-entry">
+                      <strong>
+                        <b>4</b> — Equal or first author-level contribution
+                      </strong>
+                      <em>
+                        Ex: given a high-level sketch, AI develops a full proof
+                        in a few rounds of prompting. Vibe-coding(mathing?), with
+                        non-trivial human insight provided.
+                      </em>
+                    </span>
+                    <span className="ai-scale-entry">
+                      <strong><b>5</b> — Sole significant contributor</strong>
+                      <em>
+                        No significant human involvement or insight beyond
+                        problem selection and manuscript preparation. Autonomous
+                        solution of the math.
+                      </em>
+                    </span>
                   </span>
                 </span>
-              </span>
+              </div>
             </div>
+
+            {hasFilters && (
+              <button
+                className="clear-button"
+                type="button"
+                onClick={() => {
+                  setTopic(null);
+                }}
+              >
+                Clear filters
+              </button>
+            )}
           </div>
         </div>
 
-        <ol className="paper-list" reversed start={papers[0].number}>
-            {papers.map((paper) => (
+        {visiblePapers.length ? (
+          <ol className="paper-list" reversed start={visiblePapers[0].number}>
+            {visiblePapers.map((paper) => (
               <li className="paper" key={paper.number} value={paper.number}>
                 <span className="paper-number" aria-hidden="true">
                   {paper.number}
@@ -445,9 +533,17 @@ export default function Home() {
                       {[...paper.tags]
                         .sort((a, b) => a.localeCompare(b))
                         .map((tag) => (
-                        <span className={topicClass(tag)} key={tag}>
+                        <button
+                          className={`${topicClass(tag)} tag-button${
+                            topic === tag ? " selected" : ""
+                          }`}
+                          type="button"
+                          aria-pressed={topic === tag}
+                          onClick={() => setTopic(topic === tag ? null : tag)}
+                          key={tag}
+                        >
                           {tag}
-                        </span>
+                        </button>
                         ))}
                       <span
                         className={`tag ai-tag ai-${paper.ai}`}
@@ -474,6 +570,19 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        ) : (
+          <div className="empty-state">
+            <p>No papers match these filters.</p>
+            <button
+              type="button"
+              onClick={() => {
+                setTopic(null);
+              }}
+            >
+              Show all publications
+            </button>
+          </div>
+        )}
       </section>
 
       <footer>
