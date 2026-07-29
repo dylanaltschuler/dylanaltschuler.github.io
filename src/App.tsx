@@ -587,7 +587,7 @@ export default function Home() {
 
       <footer>
         <p>
-          Expecting to find a brilliant, award-winning optimization expert? You
+          Expecting to find a brilliant optimization expert? You
           may have been looking for my brother{" "}
           <a href="https://jasonaltschuler.github.io/">Jason Altschuler</a>.
         </p>
