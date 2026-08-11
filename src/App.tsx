@@ -455,7 +455,7 @@ export default function Home() {
                       <em>Pre-LLM era.</em>
                     </span>
                     <span className="ai-scale-entry">
-                      <strong><b>1</b> — Basic contribution</strong>
+                      <strong><b>1</b> — Basic contributions from AI</strong>
                       <em>
                         Ex: editing, proofreading, or figures. Ideation is
                         entirely human.
@@ -463,7 +463,7 @@ export default function Home() {
                     </span>
                     <span className="ai-scale-entry">
                       <strong>
-                        <b>2</b> — Minor contribution; worthy of acknowledgement
+                        <b>2</b> — Minor contributions from AI; worthy of acknowledgement
                         but not authorship
                       </strong>
                       <em>
@@ -474,7 +474,7 @@ export default function Home() {
                     </span>
                     <span className="ai-scale-entry">
                       <strong>
-                        <b>3</b> — Junior or equal author-level contribution
+                        <b>3</b> — Co-author (between "junior" and equal) contributions from AI
                       </strong>
                       <em>
                         Ex: given a complete sketch with technical guidance, AI
@@ -484,7 +484,7 @@ export default function Home() {
                     </span>
                     <span className="ai-scale-entry">
                       <strong>
-                        <b>4</b> — Equal or first author-level contribution
+                        <b>4</b> — Co-author (between equal and "senior") contributions from AI
                       </strong>
                       <em>
                         Ex: given a high-level sketch, AI develops a full proof
@@ -493,7 +493,7 @@ export default function Home() {
                       </em>
                     </span>
                     <span className="ai-scale-entry">
-                      <strong><b>5</b> — Sole significant contributor</strong>
+                      <strong><b>5</b> — AI was the sole significant contributor</strong>
                       <em>
                         No significant human involvement or insight beyond
                         problem selection and manuscript preparation. Autonomous
