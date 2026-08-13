@@ -27,22 +27,22 @@ type Paper = {
 };
 
 const KONSTANTIN: Person = {
-  name: "Konstantin Tikhomirov",
+  name: "K. Tikhomirov",
   href: "https://www.andrew.cmu.edu/user/ktikhomi/",
 };
 
 const PANDELIS: Person = {
-  name: "Pandelis Dodos",
+  name: "P. Dodos",
   href: "https://sites.google.com/view/pandelis-dodos/main",
 };
 
 const TYROS: Person = {
-  name: "Konstantinos Tyros",
+  name: "K. Tyros",
   href: "http://users.uoa.gr/~ktyros/",
 };
 
 const JONATHAN: Person = {
-  name: "Jonathan Niles-Weed",
+  name: "J. Niles-Weed",
   href: "https://www.jonathannilesweed.com/",
 };
 
@@ -147,10 +147,10 @@ const papers: Paper[] = [
     number: 9,
     title: "On spectral outliers for inhomogeneous random symmetric matrices",
     authors: [
-      { name: "Patrick O. Santos" },
+      { name: "P. Santos" },
       KONSTANTIN,
       {
-        name: "Pierre Youssef",
+        name: "P. Youssef",
         href: "https://wp.nyu.edu/pyoussef/",
       },
     ],
@@ -219,12 +219,12 @@ const papers: Paper[] = [
     number: 4,
     title: "Localized radial roll patterns in higher space dimensions",
     authors: [
-      { name: "Jason J. Bramburger" },
-      { name: "Chloe I. Avery" },
-      { name: "Tharathep Sangsawang" },
-      { name: "Margaret Beck" },
-      { name: "Paul Carter" },
-      { name: "Björn Sandstede" },
+      { name: "J. Bramburger" },
+      { name: "C. Avery" },
+      { name: "T. Sangsawang" },
+      { name: "M. Beck" },
+      { name: "P. Carter" },
+      { name: "B. Sandstede" },
     ],
     venue: "SIAM Journal on Applied Dynamical Systems, 2019",
     links: [
@@ -243,7 +243,7 @@ const papers: Paper[] = [
     title: "Critical long-range percolation: scaling limits for small β",
     authors: [
       {
-        name: "Allan Sly",
+        name: "A. Sly",
         href: "https://web.math.princeton.edu/~asly/",
       },
     ],
@@ -259,11 +259,11 @@ const papers: Paper[] = [
     number: 2,
     title: "The developmental rules of neural superposition in Drosophila",
     authors: [
-      { name: "Marion Langen" },
-      { name: "Egemen Agi" },
-      { name: "Lani F. Wu" },
-      { name: "Steven J. Altschuler" },
-      { name: "Peter R. Hiesinger" },
+      { name: "M. Langen" },
+      { name: "E. Agi" },
+      { name: "L. Wu" },
+      { name: "S. Altschuler" },
+      { name: "P. Hiesinger" },
     ],
     venue: "Cell, 2015",
     links: [
@@ -281,9 +281,9 @@ const papers: Paper[] = [
     number: 1,
     title: "The zoo of solitons for curve shortening in Rⁿ",
     authors: [
-      { name: "Steven J. Altschuler" },
-      { name: "Lani F. Wu" },
-      { name: "Sigurd B. Angenent" },
+      { name: "S. Altschuler" },
+      { name: "L. Wu" },
+      { name: "S. Angenent" },
     ],
     venue: "Nonlinearity, 2015",
     links: [
