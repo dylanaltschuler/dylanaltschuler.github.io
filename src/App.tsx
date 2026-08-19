@@ -46,7 +46,23 @@ const JONATHAN: Person = {
   href: "https://www.jonathannilesweed.com/",
 };
 
+const QUENTIN: Person = {
+  name: "Q. Dubroff",
+  href: "https://sites.google.com/view/quentin-c-dubroff/home",
+};
+
 const papers: Paper[] = [
+  {
+    number: 18,
+    title: "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
+    authors: [QUENTIN, KONSTANTIN],
+    venue: "Preprint, 2026",
+    links: [],
+    tags: ["Algorithms"],
+    ai: 2,
+    summary:
+      "We consider the problem of online embeddings of permutations into random streams. Previous work studied the offline setting in connection with deep questions about universal permutations, as well as the online setting in the special case of the identity permutation (corresponding to the \"monotone subsequence\" or \"longest increasing sequence\" problems). Our theory provides a broad generalization of the latter and insights into the former. The first main result is a dynamic program giving the optimal embedding time and strategy for an arbitrary permutation. The second main result is the estimation of the asymptotic scaling for the embedding time of various canonical families. These scaling laws yield striking differences between the offline and online settings.",
+  },
   {
     number: 17,
     title: "Online Beck–Fiala down to logarithmic sparsity",
