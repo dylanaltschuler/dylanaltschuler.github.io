@@ -57,7 +57,7 @@ const papers: Paper[] = [
     title: "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
     authors: [QUENTIN, KONSTANTIN],
     venue: "Preprint, 2026",
-    links: [],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.19050" }],
     tags: ["Algorithms"],
     ai: 2,
     summary:
