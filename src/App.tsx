@@ -373,6 +373,13 @@ export default function Home() {
             combinatorics, statistical physics, algorithm design, and{" "}
             {"{metric, convex}"} geometry.
           </p>
+          <p className="research-interests">
+            Some of my specific research interests include combinatorial
+            notions of expansion, using (random) graphs to create combinatorial
+            inroads in metric geometry, online algorithms for average-case and
+            worst-case optimization, and superconcentration. I also enjoy
+            tennis and chopping logarithms. My office is PMA 9.112.
+          </p>
           <nav className="profile-links" aria-label="Profile links">
             <a href="mailto:dylan.altschuler@austin.utexas.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=4JYEysUAAAAJ&hl=en">
