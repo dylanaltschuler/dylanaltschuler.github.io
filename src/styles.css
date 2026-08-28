@@ -114,6 +114,13 @@ h1 {
   font-size: 1.05rem;
 }
 
+.research-interests {
+  max-width: 620px;
+  margin-bottom: 19px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .profile-links {
   display: flex;
   flex-wrap: wrap;
