@@ -111,19 +111,15 @@ h1 {
 .lede,
 .research-interests {
   max-width: 620px;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
 }
 
 .lede {
-  margin-bottom: 19px;
+  margin-bottom: 0;
 }
 
 .research-interests {
   margin-bottom: 19px;
-}
-
-.research-interests p {
-  margin-bottom: 8px;
 }
 
 .research-interests p:last-child {
@@ -632,12 +628,11 @@ footer > a {
 
   .lede,
   .research-interests {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
   }
 
   .lede {
     grid-column: 1 / -1;
-    margin-bottom: 14px;
   }
 
   .hero-copy {
