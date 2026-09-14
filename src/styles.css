@@ -608,7 +608,8 @@ footer > a {
 
   .hero {
     grid-template-columns: minmax(0, 1fr) 116px;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 0;
     align-items: start;
     padding-bottom: 22px;
   }
@@ -723,6 +724,10 @@ footer > a {
     margin-top: 7px;
   }
 
+  .paper-heading + .paper-meta {
+    margin-top: 5px;
+  }
+
   .authors {
     font-size: 0.8rem;
   }
@@ -740,7 +745,7 @@ footer > a {
 @media (max-width: 390px) {
   .hero {
     grid-template-columns: minmax(0, 1fr) 94px;
-    gap: 16px;
+    column-gap: 16px;
   }
 
   .institution {
