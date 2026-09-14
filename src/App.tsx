@@ -390,7 +390,7 @@ export default function Home() {
           <p className="lede">
             Discrete and high-dimensional probability, with applications to
             combinatorics, statistical physics, algorithm design, and{" "}
-            {"{metric, convex}"} geometry. Current interests include
+            {"{metric, convex}"} geometry. Current interests include:
           </p>
           <div className="research-interests">
             <ul>
