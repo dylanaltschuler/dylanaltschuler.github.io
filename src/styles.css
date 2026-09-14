@@ -121,6 +121,23 @@ h1 {
   font-size: 0.94rem;
 }
 
+.research-interests p {
+  margin-bottom: 8px;
+}
+
+.research-interests p:last-child {
+  margin-bottom: 0;
+}
+
+.research-interests ul {
+  margin: 0 0 10px;
+  padding-left: 1.25rem;
+}
+
+.research-interests li + li {
+  margin-top: 4px;
+}
+
 .profile-links {
   display: flex;
   flex-wrap: wrap;
@@ -453,6 +470,12 @@ h3 {
   border-color: #c8b4d1;
   background: #e9dfee;
   color: #6d5079;
+}
+
+.ai-2-5 {
+  border-color: #b89fc4;
+  background: #e1d3e7;
+  color: #60436c;
 }
 
 .ai-3 {
