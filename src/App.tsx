@@ -22,7 +22,7 @@ type Paper = {
   venue: string;
   links: { label: string; href: string }[];
   tags: Topic[];
-  ai: 0 | 1 | 2 | 3 | 4 | 5;
+  ai: 0 | 1 | 2 | 2.5 | 3 | 4 | 5;
   summary: string;
 };
 
@@ -52,6 +52,16 @@ const QUENTIN: Person = {
 };
 
 const papers: Paper[] = [
+  {
+    number: 19,
+    title: "Long-range expansion: construction and cutoff",
+    venue: "Preprint, 2026",
+    links: [],
+    tags: ["Metric geometry"],
+    ai: 3,
+    summary:
+      "We compare three notions of expansion: weak spectral expansion, a combinatorial notion called \"long-range expansion\", and optimal spectral expansion (Ramanujan graphs). Our first result is that Ramanujan is strictly stronger than long-range expansion, which is strictly stronger than weak spectral expansion. In particular, this gives an explicit construction of a sequence of long-range expanders with logarithmic girth, which has applications to long-standing questions in geometric group theory and functional analysis. Then, we compare these notions of expansion from a dynamical perspective. Our second main result is cutoff and an explicit cutoff window for long-range expanders. We show that random walks have identical mixing profiles for Ramanujan graphs and long-range expanders. This is intermediate progress towards the celebrated conjecture of cutoff for vertex-transitive weak spectral expanders.",
+  },
   {
     number: 18,
     title: "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
@@ -87,14 +97,14 @@ const papers: Paper[] = [
   },
   {
     number: 15,
-    title: "A threshold for online balancing of sparse i.i.d. vectors",
+    title: "The threshold for online balancing of iid binary vectors",
     authors: [KONSTANTIN],
     venue: "Submitted, 2025",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2509.02432" }],
     tags: ["Algorithms", "Discrepancy"],
-    ai: 0,
+    ai: 2.5,
     summary:
-      "We give a sharp characterization of the online discrepancy of i.i.d. stochastic arrivals from sparse binary vectors. A surprising phase transition appears in which the optimal online discrepancy does not depend on sparsity. The result also establishes an asymptotic gap, both existential and algorithmic, between the online and offline settings.",
+      "We give a sharp characterization of the online discrepancy of i.i.d. stochastic arrivals from binary vectors. Our result holds for all sparsities simultaneously. Some surprising phase transitions are revealed, establishing asymptotic gaps, both existential and algorithmic, between the online and offline settings. Replaces and supersedes a previous draft that only gave a discrepancy upper bound in the ultra-sparse regime.",
   },
   {
     number: 14,
@@ -373,13 +383,24 @@ export default function Home() {
             combinatorics, statistical physics, algorithm design, and{" "}
             {"{metric, convex}"} geometry.
           </p>
-          <p className="research-interests">
-            Some of my specific research interests include combinatorial
-            notions of expansion, using (random) graphs to create combinatorial
-            inroads in metric geometry, online algorithms for average-case and
-            worst-case optimization, and superconcentration. I also enjoy
-            tennis and chopping logarithms. My office is PMA 9.112.
-          </p>
+          <div className="research-interests">
+            <p>Some current research interests include</p>
+            <ul>
+              <li>
+                Online algorithms for average-case and worst-case optimization
+              </li>
+              <li>
+                (Random) graphs, especially as combinatorial approaches to
+                questions in geometry and functional analysis. Also, comparing
+                notions of expansion.
+              </li>
+              <li>
+                Fluctuations: sharp thresholds, cutoff for Markov chains,
+                superconcentration.
+              </li>
+            </ul>
+            <p>I also enjoy tennis. My office is PMA 9.112.</p>
+          </div>
           <nav className="profile-links" aria-label="Profile links">
             <a href="mailto:dylan.altschuler@austin.utexas.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=4JYEysUAAAAJ&hl=en">
@@ -569,7 +590,7 @@ export default function Home() {
                         </button>
                         ))}
                       <span
-                        className={`tag ai-tag ai-${paper.ai}`}
+                        className={`tag ai-tag ai-${String(paper.ai).replace(".", "-")}`}
                         aria-label={`AI contribution ${paper.ai} out of 5`}
                       >
                         AI {paper.ai}/5
