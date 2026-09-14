@@ -652,6 +652,7 @@ footer > a {
   }
 
   .hero-copy > .lede,
+  .hero-copy > .research-interests,
   .hero-copy > .profile-links {
     grid-column: 1 / -1;
   }
