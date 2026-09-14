@@ -108,10 +108,31 @@ h1 {
   line-height: 1.35;
 }
 
-.lede {
+.lede,
+.research-interests {
   max-width: 620px;
+  font-size: 0.94rem;
+}
+
+.lede {
+  margin-bottom: 0;
+}
+
+.research-interests {
   margin-bottom: 19px;
-  font-size: 1.05rem;
+}
+
+.research-interests p:last-child {
+  margin-bottom: 0;
+}
+
+.research-interests ul {
+  margin: 0 0 10px;
+  padding-left: 1.25rem;
+}
+
+.research-interests li + li {
+  margin-top: 4px;
 }
 
 .profile-links {
@@ -605,10 +626,13 @@ footer > a {
     line-height: 1.35;
   }
 
+  .lede,
+  .research-interests {
+    font-size: 0.88rem;
+  }
+
   .lede {
     grid-column: 1 / -1;
-    margin-bottom: 14px;
-    font-size: 0.92rem;
   }
 
   .hero-copy {
@@ -622,6 +646,7 @@ footer > a {
   }
 
   .hero-copy > .lede,
+  .hero-copy > .research-interests,
   .hero-copy > .profile-links {
     grid-column: 1 / -1;
   }

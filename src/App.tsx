@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useMemo, useState, type ReactNode } from "react";
 
 type Topic =
   | "Discrepancy"
@@ -23,7 +23,7 @@ type Paper = {
   links: { label: string; href: string }[];
   tags: Topic[];
   ai: 0 | 1 | 2 | 3 | 4 | 5;
-  summary: string;
+  summary: ReactNode;
 };
 
 const KONSTANTIN: Person = {
@@ -53,7 +53,37 @@ const QUENTIN: Person = {
 
 const papers: Paper[] = [
   {
+    number: 19,
+    title: "Long-range expansion: construction and cutoff",
+    venue: "Preprint, 2026",
+    links: [],
+    tags: ["Metric geometry"],
+    ai: 3,
+    summary:
+      "We compare three notions of expansion: weak spectral expansion, a combinatorial notion called \"long-range expansion\", and optimal spectral expansion (Ramanujan graphs). Our first result is that Ramanujan is strictly stronger than long-range expansion, which is strictly stronger than weak spectral expansion. In particular, this gives an explicit construction of a sequence of long-range expanders with logarithmic girth, which has applications to long-standing questions in geometric group theory and functional analysis. Then, we compare these notions of expansion from a dynamical perspective. Our second main result is cutoff and an explicit cutoff window for long-range expanders. We show that random walks have identical mixing profiles for Ramanujan graphs and long-range expanders. This is intermediate progress towards the celebrated conjecture of cutoff for vertex-transitive weak spectral expanders.",
+  },
+  {
     number: 18,
+    title: "The threshold for online balancing of iid binary vectors",
+    authors: [KONSTANTIN],
+    venue: "Preprint, 2026",
+    links: [],
+    tags: ["Algorithms", "Discrepancy"],
+    ai: 3,
+    summary: (
+      <>
+        We give a sharp characterization of the online discrepancy of i.i.d.
+        stochastic arrivals from binary vectors. Our result holds for all
+        sparsities simultaneously. Some surprising phase transitions are
+        revealed, establishing asymptotic gaps, both existential and
+        algorithmic, between the online and offline settings. This supersedes a{" "}
+        <a href="https://arxiv.org/pdf/2509.02432">previous draft</a> that only
+        gave a discrepancy upper bound in the ultra-sparse regime.
+      </>
+    ),
+  },
+  {
+    number: 17,
     title: "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
     authors: [QUENTIN, KONSTANTIN],
     venue: "Preprint, 2026",
@@ -64,7 +94,7 @@ const papers: Paper[] = [
       "We consider the problem of online embeddings of permutations into random streams. Previous work studied the offline setting in connection with deep questions about universal permutations, as well as the online setting in the special case of the identity permutation (corresponding to the \"monotone subsequence\" or \"longest increasing sequence\" problems). Our theory provides a broad generalization of the latter and insights into the former. The first main result is a dynamic program giving the optimal embedding time and strategy for an arbitrary permutation. The second main result is the estimation of the asymptotic scaling for the embedding time of various canonical families. These scaling laws yield striking differences between the offline and online settings.",
   },
   {
-    number: 17,
+    number: 16,
     title: "Online Beck–Fiala down to logarithmic sparsity",
     authors: [KONSTANTIN],
     venue: "arXiv, 2026",
@@ -75,7 +105,7 @@ const papers: Paper[] = [
       "We extend the range of sparsities for which the Beck–Fiala conjecture is known, down to almost logarithmic sparsity. More importantly, we do so by means of an online algorithm for minimizing prefix discrepancy; previous work on the conjecture uses offline arguments. As Beck–Fiala scaling cannot hold below logarithmic sparsity in the online setting, our result is essentially optimal. The online Spencer setting is resolved as an immediate consequence.",
   },
   {
-    number: 16,
+    number: 15,
     title: "Metric Poincaré inequalities for graphs",
     authors: [PANDELIS, KONSTANTIN, TYROS],
     venue: "Submitted, 2025",
@@ -84,17 +114,6 @@ const papers: Paper[] = [
     ai: 0,
     summary:
       "Extrapolation and nonlinear spectral-gap estimates are core tools in the study of metric embeddings of graphs. We prove optimal extrapolation estimates for spectral gaps of expander graphs into arbitrary metric spaces and optimal estimates on the nonlinear spectral gap of random graphs into metric spaces. Previously, these results were known only for embeddings into vector spaces.",
-  },
-  {
-    number: 15,
-    title: "A threshold for online balancing of sparse i.i.d. vectors",
-    authors: [KONSTANTIN],
-    venue: "Submitted, 2025",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2509.02432" }],
-    tags: ["Algorithms", "Discrepancy"],
-    ai: 0,
-    summary:
-      "We give a sharp characterization of the online discrepancy of i.i.d. stochastic arrivals from sparse binary vectors. A surprising phase transition appears in which the optimal online discrepancy does not depend on sparsity. The result also establishes an asymptotic gap, both existential and algorithmic, between the online and offline settings.",
   },
   {
     number: 14,
@@ -371,8 +390,25 @@ export default function Home() {
           <p className="lede">
             Discrete and high-dimensional probability, with applications to
             combinatorics, statistical physics, algorithm design, and{" "}
-            {"{metric, convex}"} geometry.
+            {"{metric, convex}"} geometry. Current interests include:
           </p>
+          <div className="research-interests">
+            <ul>
+              <li>
+                Online algorithms for average-case and worst-case optimization
+              </li>
+              <li>
+                (Random) graphs, especially as combinatorial approaches to
+                geometry and functional analysis. Also, comparing notions of
+                expansion.
+              </li>
+              <li>
+                Fluctuations: sharp thresholds, cutoff for Markov chains,
+                superconcentration.
+              </li>
+            </ul>
+            <p>I also enjoy tennis. My office is PMA 9.112.</p>
+          </div>
           <nav className="profile-links" aria-label="Profile links">
             <a href="mailto:dylan.altschuler@austin.utexas.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=4JYEysUAAAAJ&hl=en">
@@ -394,8 +430,8 @@ export default function Home() {
         <div>
           <p className="section-kicker">Current</p>
           <p>
-            Assistant professor of mathematics and a Fellow of the Sid W.
-            Richardson Foundation Regents Chair at UT Austin.
+            Assistant professor of mathematics (tenure track). Fellow of the
+            Sid W. Richardson Foundation Regents Chair at UT Austin.
           </p>
         </div>
         <div>
