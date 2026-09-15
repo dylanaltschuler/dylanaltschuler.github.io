@@ -56,7 +56,7 @@ const papers: Paper[] = [
     number: 19,
     title: "Long-range expansion: construction and cutoff",
     venue: "Preprint, 2026",
-    links: [],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.14945" }],
     tags: ["Metric geometry"],
     ai: 3,
     summary:
@@ -67,7 +67,7 @@ const papers: Paper[] = [
     title: "The threshold for online balancing of iid binary vectors",
     authors: [KONSTANTIN],
     venue: "Preprint, 2026",
-    links: [],
+    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2609.14975" }],
     tags: ["Algorithms", "Discrepancy"],
     ai: 3,
     summary: (
