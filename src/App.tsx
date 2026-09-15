@@ -6,6 +6,7 @@ type Topic =
   | "Discrepancy"
   | "Metric geometry"
   | "Algorithms"
+  | "Random graphs"
   | "Statistical physics"
   | "Misc";
 
@@ -57,7 +58,7 @@ const papers: Paper[] = [
     title: "Long-range expansion: construction and cutoff",
     venue: "Preprint, 2026",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.14945" }],
-    tags: ["Metric geometry"],
+    tags: ["Metric geometry", "Random graphs"],
     ai: 3,
     summary:
       "We compare three notions of expansion: weak spectral expansion, a combinatorial notion called \"long-range expansion\", and optimal spectral expansion (Ramanujan graphs). Our first result is that Ramanujan is strictly stronger than long-range expansion, which is strictly stronger than weak spectral expansion. In particular, this gives an explicit construction of a sequence of long-range expanders with logarithmic girth, which has applications to long-standing questions in geometric group theory and functional analysis. Then, we compare these notions of expansion from a dynamical perspective. Our second main result is cutoff and an explicit cutoff window for long-range expanders. We show that random walks have identical mixing profiles for Ramanujan graphs and long-range expanders. This is intermediate progress towards the celebrated conjecture of cutoff for vertex-transitive weak spectral expanders.",
@@ -110,7 +111,7 @@ const papers: Paper[] = [
     authors: [PANDELIS, KONSTANTIN, TYROS],
     venue: "Submitted, 2025",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2509.25489" }],
-    tags: ["Metric geometry"],
+    tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
       "Extrapolation and nonlinear spectral-gap estimates are core tools in the study of metric embeddings of graphs. We prove optimal extrapolation estimates for spectral gaps of expander graphs into arbitrary metric spaces and optimal estimates on the nonlinear spectral gap of random graphs into metric spaces. Previously, these results were known only for embeddings into vector spaces.",
@@ -122,7 +123,7 @@ const papers: Paper[] = [
     authors: [KONSTANTIN],
     venue: "Submitted, 2025",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2507.02785" }],
-    tags: ["Metric geometry"],
+    tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
       "We give a sharp characterization of the dimension-reduction modulus for superlogarithmic distortion, closing a long-standing gap and resolving a question from Naor’s 2018 ICM lecture. The proof studies the minimum dimension in which a random graph embeds with superlogarithmic distortion.",
@@ -140,7 +141,7 @@ const papers: Paper[] = [
         href: "https://vimeo.com/showcase/metricembeddings?video=1099528291",
       },
     ],
-    tags: ["Algorithms", "Metric geometry"],
+    tags: ["Algorithms", "Metric geometry", "Random graphs"],
     ai: 0,
     summary:
       "The standard Euclidean Poincaré inequality gives dimension-free bounds on the expansion of functions from an expander graph into Euclidean space. We prove an analogue for functions from one random graph into another. This resolves a question of Jon Kleinberg and yields a stochastic construction of a universal approximator for random graphs, answering a question of Mendel and Naor.",
@@ -162,7 +163,7 @@ const papers: Paper[] = [
     authors: [KONSTANTIN],
     venue: "Submitted, 2025",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2501.09142" }],
-    tags: ["Metric geometry"],
+    tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
       "It is classical that bounded-degree expander graphs cannot be embedded as geometric graphs into Euclidean space of sublogarithmic dimension. We show that this obstruction is universal over the choice of norm: almost every regular graph admits no such embedding into any normed space of sublogarithmic dimension.",
@@ -173,7 +174,7 @@ const papers: Paper[] = [
     authors: [PANDELIS, KONSTANTIN, TYROS],
     venue: "Submitted, 2024",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2410.04394" }],
-    tags: ["Metric geometry"],
+    tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
       "We introduce a combinatorial framework for proving quantitative estimates on nonlinear spectral gaps, where the Euclidean norm in the discrete Poincaré inequality is replaced by an arbitrary norm. As an application, we generalize a celebrated non-embeddability result of Matoušek for expander graphs.",
@@ -285,7 +286,7 @@ const papers: Paper[] = [
     authorPrefix: "Advised by",
     venue: "Princeton senior thesis, 2018",
     links: [],
-    tags: ["Statistical physics"],
+    tags: ["Random graphs", "Statistical physics"],
     ai: 0,
     summary:
       "We establish almost-sure convergence of one-dimensional critical long-range percolation to a random scaling limit in the Gromov–Hausdorff metric. The regime considered has the critical exponent, with the connection probability multiplied by a small leading constant β. Manuscript available on request.",
@@ -336,6 +337,7 @@ const topics: Topic[] = [
   "Discrepancy",
   "Metric geometry",
   "Misc",
+  "Random graphs",
   "Statistical physics",
 ];
 
