@@ -599,12 +599,14 @@ export default function Home() {
                           {tag}
                         </button>
                         ))}
-                      <span
-                        className={`tag ai-tag ai-${paper.ai}`}
-                        aria-label={`AI contribution ${paper.ai} out of 5`}
-                      >
-                        AI {paper.ai}/5
-                      </span>
+                      {paper.ai > 0 && (
+                        <span
+                          className="tag ai-tag"
+                          aria-label={`AI contribution ${paper.ai} out of 5`}
+                        >
+                          AI {paper.ai}/5
+                        </span>
+                      )}
                     </div>
                   </div>
                   <AuthorLine paper={paper} />
