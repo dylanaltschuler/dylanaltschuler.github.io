@@ -69,7 +69,7 @@ const papers: Paper[] = [
     authors: [KONSTANTIN],
     venue: "Preprint, 2026",
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2609.14975" }],
-    tags: ["Algorithms", "Discrepancy"],
+    tags: ["Algorithms", "Discrepancy", "Random graphs"],
     ai: 3,
     summary: (
       <>
@@ -246,7 +246,7 @@ const papers: Paper[] = [
     links: [
       { label: "arXiv", href: "https://arxiv.org/pdf/2101.04036.pdf" },
     ],
-    tags: ["Discrepancy"],
+    tags: ["Discrepancy", "Random graphs"],
     ai: 0,
     summary:
       "We give an exact trade-off between discrepancy, dimension, and sparsity for canonical ensembles of integer matrices. By combining Stein’s method of exchangeable pairs with the second-moment method, we move past an obstruction to concentration below a certain sparsity and essentially characterize all regimes simultaneously.",
