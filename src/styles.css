@@ -457,39 +457,9 @@ h3 {
 }
 
 .ai-tag {
-  border-color: #d4ced8;
-  background: transparent;
-  color: #736c76;
-}
-
-.ai-1 {
-  border-color: #d6cddd;
-  background: #f3eff5;
-  color: #705c77;
-}
-
-.ai-2 {
   border-color: #c8b4d1;
   background: #e9dfee;
   color: #6d5079;
-}
-
-.ai-3 {
-  border-color: #a78bb2;
-  background: #d8c7df;
-  color: #52375d;
-}
-
-.ai-4 {
-  border-color: #80618d;
-  background: #80618d;
-  color: #fff;
-}
-
-.ai-5 {
-  border-color: #593963;
-  background: #593963;
-  color: #fff;
 }
 
 .authors {
