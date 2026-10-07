@@ -21,6 +21,7 @@ type Paper = {
   authors?: Person[];
   authorPrefix?: "With" | "Advised by";
   venue: string;
+  journal?: boolean;
   links: { label: string; href: string }[];
   tags: Topic[];
   ai: 0 | 1 | 2 | 3 | 4 | 5;
@@ -89,7 +90,7 @@ const papers: Paper[] = [
     title: "The threshold for online balancing of iid binary vectors",
     authors: [KONSTANTIN],
     venue: "Preprint, 2026",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2609.14975" }],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.14975" }],
     tags: ["Algorithms", "Discrepancy", "Random graphs"],
     ai: 3,
     summary: (
@@ -119,7 +120,7 @@ const papers: Paper[] = [
     number: 16,
     title: "Online Beck–Fiala down to logarithmic sparsity",
     authors: [KONSTANTIN],
-    venue: "arXiv, 2026",
+    venue: "Preprint, 2026",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2607.14238" }],
     tags: ["Algorithms", "Discrepancy"],
     ai: 4,
@@ -130,8 +131,8 @@ const papers: Paper[] = [
     number: 15,
     title: "Metric Poincaré inequalities for graphs",
     authors: [PANDELIS, KONSTANTIN, TYROS],
-    venue: "Submitted, 2025",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2509.25489" }],
+    venue: "Preprint, 2025",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2509.25489" }],
     tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
@@ -142,8 +143,8 @@ const papers: Paper[] = [
     title:
       "Metric dimension reduction modulus for superlogarithmic distortion",
     authors: [KONSTANTIN],
-    venue: "Submitted, 2025",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2507.02785" }],
+    venue: "Preprint, 2025",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2507.02785" }],
     tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
@@ -154,7 +155,7 @@ const papers: Paper[] = [
     title:
       "Discrete Poincaré inequalities and universal approximators for random graphs",
     authors: [PANDELIS, KONSTANTIN, TYROS],
-    venue: "Submitted, 2025",
+    venue: "Preprint, 2025",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2506.17433" },
       {
@@ -172,6 +173,7 @@ const papers: Paper[] = [
     title: "A universal threshold for geometric embeddings of trees",
     authors: [PANDELIS, KONSTANTIN, TYROS],
     venue: "Combinatorica, 2025",
+    journal: true,
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2504.15212" }],
     tags: ["Metric geometry"],
     ai: 0,
@@ -182,8 +184,8 @@ const papers: Paper[] = [
     number: 11,
     title: "Universal geometric non-embedding of random regular graphs",
     authors: [KONSTANTIN],
-    venue: "Submitted, 2025",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2501.09142" }],
+    venue: "Preprint, 2025",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2501.09142" }],
     tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
@@ -193,8 +195,8 @@ const papers: Paper[] = [
     number: 10,
     title: "A combinatorial approach to nonlinear spectral gaps",
     authors: [PANDELIS, KONSTANTIN, TYROS],
-    venue: "Submitted, 2024",
-    links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2410.04394" }],
+    venue: "Preprint, 2024",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2410.04394" }],
     tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
@@ -212,8 +214,9 @@ const papers: Paper[] = [
       },
     ],
     venue: "Journal of Theoretical Probability, 2024",
+    journal: true,
     links: [
-      { label: "arXiv", href: "https://arxiv.org/abs/2401.07852.pdf" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2401.07852" },
     ],
     tags: ["Misc"],
     ai: 0,
@@ -235,8 +238,9 @@ const papers: Paper[] = [
     number: 7,
     title: "Zero–one laws for random feasibility problems",
     venue: "Annals of Applied Probability, 2023",
+    journal: true,
     links: [
-      { label: "arXiv", href: "https://arxiv.org/abs/2309.13133.pdf" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2309.13133" },
     ],
     tags: ["Discrepancy", "Statistical physics"],
     ai: 0,
@@ -247,8 +251,9 @@ const papers: Paper[] = [
     number: 6,
     title: "Critical window of the symmetric perceptron",
     venue: "Electronic Journal of Probability, 2022",
+    journal: true,
     links: [
-      { label: "arXiv", href: "https://arxiv.org/pdf/2205.02319.pdf" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2205.02319" },
       {
         label: "video",
         href: "https://mediaspace.gatech.edu/media/ARC+Colloquium/1_t58fwxnt",
@@ -264,8 +269,9 @@ const papers: Paper[] = [
     title: "Discrepancy of random rectangular matrices",
     authors: [JONATHAN],
     venue: "Random Structures & Algorithms, 2021",
+    journal: true,
     links: [
-      { label: "arXiv", href: "https://arxiv.org/pdf/2101.04036.pdf" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2101.04036" },
     ],
     tags: ["Discrepancy", "Random graphs"],
     ai: 0,
@@ -284,6 +290,7 @@ const papers: Paper[] = [
       { name: "B. Sandstede" },
     ],
     venue: "SIAM Journal on Applied Dynamical Systems, 2019",
+    journal: true,
     links: [
       {
         label: "PDF",
@@ -323,6 +330,7 @@ const papers: Paper[] = [
       { name: "P. Hiesinger" },
     ],
     venue: "Cell, 2015",
+    journal: true,
     links: [
       {
         label: "PDF",
@@ -343,8 +351,9 @@ const papers: Paper[] = [
       { name: "S. Angenent" },
     ],
     venue: "Nonlinearity, 2015",
+    journal: true,
     links: [
-      { label: "arXiv", href: "https://arxiv.org/pdf/1207.4051.pdf" },
+      { label: "arXiv", href: "https://arxiv.org/abs/1207.4051" },
     ],
     tags: ["Misc"],
     ai: 0,
@@ -364,6 +373,19 @@ const topics: Topic[] = [
 
 function topicClass(topic: Topic) {
   return `tag tag-${topic.toLowerCase().replaceAll(" ", "-")}`;
+}
+
+function PaperTitle({ paper }: { paper: Paper }) {
+  const manuscript = paper.links.find((link) => link.label === "arXiv")
+    ?? paper.links.find((link) => link.label === "PDF");
+
+  return <h3>{manuscript ? <a href={manuscript.href}>{paper.title}</a> : paper.title}</h3>;
+}
+
+function Venue({ paper }: { paper: Paper }) {
+  if (!paper.journal) return <span>{paper.venue}</span>;
+  const split = paper.venue.lastIndexOf(", ");
+  return <span><em>{paper.venue.slice(0, split)}</em>{paper.venue.slice(split)}</span>;
 }
 
 function AuthorLine({ paper }: { paper: Paper }) {
@@ -405,10 +427,17 @@ export default function Home() {
 
   return (
     <main className="site-shell">
-      <header className="hero" id="top">
+      <div className="topbar" id="top">
+        <p className="institution">The University of Texas at Austin</p>
+        <nav className="profile-links" aria-label="Profile links">
+          <a href="#publications">Publications</a>
+          <a href="mailto:dylan.altschuler@austin.utexas.edu">Email <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=4JYEysUAAAAJ&hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+      <header className="hero">
         <div className="hero-copy">
           <h1>Dylan J. Altschuler</h1>
-          <p className="institution">The University of Texas at Austin</p>
           <p className="role">Assistant Professor of Mathematics</p>
           <p className="lede">
             Discrete and high-dimensional probability, with applications to
@@ -432,12 +461,6 @@ export default function Home() {
             </ul>
             <p>I also enjoy tennis. My office is PMA 9.112.</p>
           </div>
-          <nav className="profile-links" aria-label="Profile links">
-            <a href="mailto:dylan.altschuler@austin.utexas.edu">Email</a>
-            <a href="https://scholar.google.com/citations?user=4JYEysUAAAAJ&hl=en">
-              Google Scholar
-            </a>
-          </nav>
         </div>
         <figure className="portrait">
           <img
@@ -509,22 +532,9 @@ export default function Home() {
 
           <div className="filter-controls">
             <div className="filter-group ai-filter">
-              <div className="ai-scale-label">
-                AI Usage Scale
-                <span className="ai-scale-info">
-                  <button
-                    className="ai-scale-button"
-                    type="button"
-                    aria-label="Explain the AI usage scale"
-                    aria-describedby="ai-scale-description"
-                  >
-                    ?
-                  </button>
-                  <span
-                    className="ai-scale-tooltip"
-                    id="ai-scale-description"
-                  role="tooltip"
-                >
+              <details className="ai-scale-info">
+                <summary className="ai-scale-button">AI Usage Scale <span aria-hidden="true">?</span></summary>
+                <div className="ai-scale-tooltip" id="ai-scale-description">
                     <span className="ai-scale-entry">
                       <strong><b>0</b> — No AI</strong>
                       <em>Pre-LLM era.</em>
@@ -575,9 +585,8 @@ export default function Home() {
                         solution of the math.
                       </em>
                     </span>
-                  </span>
-                </span>
-              </div>
+                </div>
+              </details>
             </div>
 
             {hasFilters && (
@@ -603,7 +612,7 @@ export default function Home() {
                 </span>
                 <article>
                   <div className="paper-heading">
-                    <h3>{paper.title}</h3>
+                    <PaperTitle paper={paper} />
                     <div className="paper-tags" aria-label="Paper tags">
                       {[...paper.tags]
                         .sort((a, b) => a.localeCompare(b))
@@ -632,8 +641,8 @@ export default function Home() {
                   </div>
                   <AuthorLine paper={paper} />
                   <div className="paper-meta">
-                    <span>{paper.venue}</span>
-                    {paper.links.map((link) => (
+                    <Venue paper={paper} />
+                    {paper.links.filter((link) => !["arXiv", "PDF"].includes(link.label)).map((link) => (
                       <a href={link.href} key={link.href}>
                         {link.label}
                       </a>
