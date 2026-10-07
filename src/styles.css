@@ -457,9 +457,9 @@ h3 {
 }
 
 .ai-tag {
-  border-color: #c8b4d1;
-  background: #e9dfee;
-  color: #6d5079;
+  border-color: #d1cfcc;
+  background: #ecebea;
+  color: #5e5b57;
 }
 
 .authors {
@@ -479,6 +479,11 @@ h3 {
   gap: 3px 12px;
   color: var(--muted);
   font-size: 0.73rem;
+}
+
+.paper-meta > span,
+.paper-meta > a {
+  font-size: 0.84rem;
 }
 
 .paper-meta details {
@@ -703,7 +708,9 @@ footer > a {
     margin-top: 5px;
   }
 
-  .authors {
+  .authors,
+  .paper-meta > span,
+  .paper-meta > a {
     font-size: 0.8rem;
   }
 

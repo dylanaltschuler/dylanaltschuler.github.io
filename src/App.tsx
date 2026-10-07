@@ -52,7 +52,28 @@ const QUENTIN: Person = {
   href: "https://sites.google.com/view/quentin-c-dubroff/home",
 };
 
+const RUBEN: Person = {
+  name: "R. Ascoli",
+  href: "https://sites.google.com/view/ruben-ascoli",
+};
+
+const WILL: Person = {
+  name: "W. Perkins",
+  href: "https://willperkins.org/",
+};
+
 const papers: Paper[] = [
+  {
+    number: 20,
+    title: "Satisfiability and Freezing in Random integer programs",
+    authors: [RUBEN, WILL],
+    venue: "Preprint, 2026",
+    links: [],
+    tags: ["Discrepancy", "Statistical physics"],
+    ai: 2,
+    summary:
+      "We study a model of a random centrally symmetric polytope and ask about the existence of points in the polytope with non-zero, integer coordinates. Our main results are the location of a sharp threshold for the existence of these integer points, a characterization of the typical empirical distribution of their coordinates, and showing that near the feasibility threshold these integer points are almost always totally isolated.",
+  },
   {
     number: 19,
     title: "Long-range expansion: construction and cutoff",
