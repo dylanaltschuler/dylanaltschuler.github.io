@@ -66,7 +66,7 @@ summary:focus-visible {
 .profile-links,
 .filter-chip,
 .tag,
-.paper-meta,
+.paper-meta summary,
 .clear-button,
 .empty-state button,
 .role {
@@ -464,7 +464,7 @@ h3 {
 
 .authors {
   margin: 4px 0 1px;
-  color: #555e64;
+  color: var(--ink);
   font-size: 0.84rem;
 }
 
@@ -477,13 +477,12 @@ h3 {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 3px 12px;
-  color: var(--muted);
-  font-size: 0.73rem;
+  color: var(--ink);
+  font-size: 0.84rem;
 }
 
-.paper-meta > span,
 .paper-meta > a {
-  font-size: 0.84rem;
+  color: inherit;
 }
 
 .paper-meta details {
@@ -501,6 +500,7 @@ h3 {
   background: rgba(255, 255, 255, 0.5);
   color: var(--link);
   cursor: pointer;
+  font-size: 0.73rem;
   list-style: none;
   font-weight: 700;
   line-height: 1;
@@ -709,8 +709,7 @@ footer > a {
   }
 
   .authors,
-  .paper-meta > span,
-  .paper-meta > a {
+  .paper-meta {
     font-size: 0.8rem;
   }
 
