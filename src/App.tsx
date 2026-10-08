@@ -24,7 +24,7 @@ type Paper = {
   journal?: boolean;
   links: { label: string; href: string }[];
   tags: Topic[];
-  ai: 0 | 1 | 2 | 3 | 4 | 5;
+  ai: 0 | 1 | 1.5 | 2 | 3 | 4 | 5;
   summary: ReactNode;
 };
 
@@ -71,7 +71,7 @@ const papers: Paper[] = [
     venue: "Preprint, 2026",
     links: [],
     tags: ["Discrepancy", "Statistical physics"],
-    ai: 2,
+    ai: 1.5,
     summary:
       "We study a model of a random centrally symmetric polytope and ask about the existence of points in the polytope with non-zero, integer coordinates. Our main results are the location of a sharp threshold for the existence of these integer points, a characterization of the typical empirical distribution of their coordinates, and showing that near the feasibility threshold these integer points are almost always totally isolated.",
   },
