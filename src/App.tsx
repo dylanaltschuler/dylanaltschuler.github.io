@@ -66,7 +66,7 @@ const WILL: Person = {
 const papers: Paper[] = [
   {
     number: 20,
-    title: "Satisfiability and Freezing in Random integer programs",
+    title: "Satisfiability and freezing in random integer programs",
     authors: [RUBEN, WILL],
     venue: "Preprint, 2026",
     links: [],
@@ -107,7 +107,7 @@ const papers: Paper[] = [
   },
   {
     number: 17,
-    title: "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
+    title: "Online permutation embedding: optimal stopping and scaling laws",
     authors: [QUENTIN, KONSTANTIN],
     venue: "Preprint, 2026",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.19050" }],
