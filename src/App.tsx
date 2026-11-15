@@ -121,7 +121,10 @@ const papers: Paper[] = [
     title: "Online Beck–Fiala down to logarithmic sparsity",
     authors: [KONSTANTIN],
     venue: "Preprint, 2026",
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2607.14238" }],
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2607.14238" },
+      { label: "video", href: "https://www.youtube.com/watch?v=Is--QIEpYzc" },
+    ],
     tags: ["Algorithms", "Discrepancy"],
     ai: 4,
     summary:
