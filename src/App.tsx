@@ -147,7 +147,10 @@ const papers: Paper[] = [
       "Metric dimension reduction modulus for superlogarithmic distortion",
     authors: [KONSTANTIN],
     venue: "Preprint, 2025",
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2507.02785" }],
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2507.02785" },
+      { label: "slides", href: "/Metric%20dimension%20reduction%20modulus.pdf" },
+    ],
     tags: ["Metric geometry", "Random graphs"],
     ai: 0,
     summary:
