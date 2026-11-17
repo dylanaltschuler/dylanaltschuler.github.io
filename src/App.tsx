@@ -69,7 +69,7 @@ const papers: Paper[] = [
     title: "Satisfiability and freezing in random integer programs",
     authors: [RUBEN, WILL],
     venue: "Preprint, 2026",
-    links: [],
+    links: [{ label: "slides", href: "/Integer%20Perceptron%20%2860min%29.pdf" }],
     tags: ["Discrepancy", "Statistical physics"],
     ai: 1.5,
     summary:
